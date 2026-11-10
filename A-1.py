@@ -19,3 +19,15 @@ markup = int(input("Enter the markup amount to add to the price of items: "))
 marked_up_prices = list(map(lambda p: p + markup, prices))
 print("After marking up the prices: ", marked_up_prices)
 
+item_index = items.index(chosen_item)
+chosen_price = marked_up_prices[item_index]
+print("Price of", chosen_item, "after markup:", chosen_price)
+
+inventory[chosen_item] = inventory[chosen_item] - 1
+print(chosen_item, "purchased! Remaining stock:", inventory[chosen_item])
+
+print("School Items Inventory")
+print("Item Bought:", chosen_item)
+print("Price Paid:", chosen_price)
+print("Updated Inventory:", inventory)
+print("=============================================")
